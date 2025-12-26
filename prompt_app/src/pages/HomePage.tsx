@@ -107,28 +107,30 @@ export default function Homepage() {
                 className="prose dark:prose-invert max-w-none bg-muted text-foreground p-4 rounded-lg shadow mb-4"
               >
                 <ReactMarkdown
-                  components={{
-                    code({ inline, className, children }) {
-                      const match = /language-(\w+)/.exec(className || "");
-                      return !inline && match ? (
-                        <SyntaxHighlighter
-                          style={vs2015}
-                          language={match[1]}
-                          PreTag="div"
-                          className="rounded-md"
-                        >
-                          {String(children).replace(/\n$/, "")}
-                        </SyntaxHighlighter>
-                      ) : (
-                        <code className="bg-muted rounded px-1 py-0.5 text-sm">
-                          {children}
-                        </code>
-                      );
-                    },
-                  }}
-                >
-                  {msg.content}
+                    components={{
+                      code({ className, children }) {
+                        const match = /language-(\w+)/.exec(className || "");
+
+                        return match ? (
+                          <SyntaxHighlighter
+                            style={vs2015}
+                            language={match[1]}
+                            PreTag="div"
+                            className="rounded-md"
+                          >
+                            {String(children).replace(/\n$/, "")}
+                          </SyntaxHighlighter>
+                        ) : (
+                          <code className="bg-muted rounded px-1 py-0.5 text-sm">
+                            {children}
+                          </code>
+                        );
+                      },
+                    }}
+                  >
+                    {msg.content}
                 </ReactMarkdown>
+
               </div>
             )
           )}
