@@ -5,6 +5,11 @@ This project demonstrates how to build, integrate, and deploy a modern AI assist
 
 ---
 
+🔗 Live demo (Render free tier – may take a few seconds to load): 
+https://prompt-ai-7ga5.onrender.com
+
+---
+
 ## Project Overview
 
 This AI Chat App allows users to interact with an intelligent assistant through a responsive and user-friendly chat interface.  
