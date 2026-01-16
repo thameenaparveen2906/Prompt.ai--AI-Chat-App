@@ -6,7 +6,8 @@ This project demonstrates how to build, integrate, and deploy a modern AI assist
 ---
 
 🔗 Live demo (Render free tier – may take a few seconds to load): 
-https://prompt-ai-7ga5.onrender.com
+https://prompt-ai-7ga5.onrender.com (Frontend)
+https://prompt-ai-ai-chat-app.onrender.com (Backend)
 
 ---
 
